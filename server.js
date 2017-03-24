@@ -1,4 +1,5 @@
 const express = require('express');
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.get( "/:date" , ( request, response ) => {
@@ -34,6 +35,6 @@ app.get( "/", ( request, response ) => {
     response.end();
 });
 
-app.listen( 3000 , ( data ) => {
-  console.log( 'listening on 3000' );
+app.listen( port , ( data ) => {
+  console.log( 'listening on ' + port );
 });
